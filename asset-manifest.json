@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/gpt-chef/static/css/main.ec206adc.css",
+    "main.js": "/gpt-chef/static/js/main.5f2f09b7.js",
+    "static/media/chef-icon.png": "/gpt-chef/static/media/chef-icon.340e1555799ac9dfa824.png",
+    "index.html": "/gpt-chef/index.html",
+    "main.ec206adc.css.map": "/gpt-chef/static/css/main.ec206adc.css.map",
+    "main.5f2f09b7.js.map": "/gpt-chef/static/js/main.5f2f09b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec206adc.css",
+    "static/js/main.5f2f09b7.js"
+  ]
+}
