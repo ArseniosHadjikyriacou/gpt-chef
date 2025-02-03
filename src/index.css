@@ -105,6 +105,16 @@ ul.ingredients-list > li {
   cursor: pointer;
 }
 
+.get-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  background: #F0EFEB;
+  padding: 10px 28px;
+}
+
 .suggested-recipe-container {
   color: #475467;
   line-height: 28px;

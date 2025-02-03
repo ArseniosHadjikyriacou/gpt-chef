@@ -1,15 +1,23 @@
 import React from "react"
-import IngredientsList from "./components/IngredientsList"
-import GptRecipe from "./components/GptRecipe"
-import { getRecipeFromMistral } from "./gpt"
+import IngredientsList from "./IngredientsList"
+import GptRecipe from "./GptRecipe"
+import { getRecipeFromMistral } from "../gpt"
 
 export default function Main() {
 
     const [ingredients, setIngredients] = React.useState([])
     const [recipe, setRecipe] = React.useState('')
+    const [loading, setLoading] = React.useState(false)
+    const recipeSection = React.useRef(null)
+
+    React.useEffect(() => {
+        if (recipe !== "" && recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView({behavior: "smooth"})
+        }
+    },[recipe])
 
     async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromMistral(ingredients)
+        const recipeMarkdown = await getRecipeFromMistral(ingredients,setLoading)
         setRecipe(recipeMarkdown)
     }
 
@@ -32,8 +40,10 @@ export default function Main() {
 
             {ingredients.length > 0 &&
                 <IngredientsList
+                    ref={recipeSection}
                     ingredients={ingredients}
                     getRecipe={getRecipe}
+                    loading={loading}
                 />
             }
 

@@ -1,7 +1,7 @@
 import { HfInference } from '@huggingface/inference'
 
 const SYSTEM_PROMPT = `
-You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients. Format your response in markdown to make it easier to render to a web page. Please do not use the word markdown.
+You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients. Format your response in markdown to make it easier to render to a web page.
 `
 
 // 🚨👉 ALERT: Read message below! You've been warned! 👈🚨
@@ -16,9 +16,10 @@ You are an assistant that receives a list of ingredients that a user has and sug
 
 const hf = new HfInference(process.env.REACT_APP_HF_API_KEY)
 
-export async function getRecipeFromMistral(ingredientsArr) {
+export async function getRecipeFromMistral(ingredientsArr,setLoading) {
     const ingredientsString = ingredientsArr.join(", ")
     try {
+        setLoading(true)
         const response = await hf.chatCompletion({
             model: "mistralai/Mistral-7B-Instruct-v0.2",
             messages: [
@@ -30,5 +31,8 @@ export async function getRecipeFromMistral(ingredientsArr) {
         return response.choices[0].message.content
     } catch (err) {
         console.error(err.message)
+        setLoading(false)
+    } finally {
+        setLoading(false)
     }
 }
