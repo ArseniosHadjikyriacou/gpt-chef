@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/gpt-chef/static/css/main.ec206adc.css",
-    "main.js": "/gpt-chef/static/js/main.15bda946.js",
+    "main.css": "/gpt-chef/static/css/main.90b506ff.css",
+    "main.js": "/gpt-chef/static/js/main.8b66c232.js",
     "static/media/chef-icon.png": "/gpt-chef/static/media/chef-icon.340e1555799ac9dfa824.png",
     "index.html": "/gpt-chef/index.html",
-    "main.ec206adc.css.map": "/gpt-chef/static/css/main.ec206adc.css.map",
-    "main.15bda946.js.map": "/gpt-chef/static/js/main.15bda946.js.map"
+    "main.90b506ff.css.map": "/gpt-chef/static/css/main.90b506ff.css.map",
+    "main.8b66c232.js.map": "/gpt-chef/static/js/main.8b66c232.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec206adc.css",
-    "static/js/main.15bda946.js"
+    "static/css/main.90b506ff.css",
+    "static/js/main.8b66c232.js"
   ]
 }
