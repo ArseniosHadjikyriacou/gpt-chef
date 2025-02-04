@@ -17,7 +17,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 const hf = new HfInference(process.env.REACT_APP_HF_API_KEY)
 
 export async function getRecipeFromMistral(ingredientsArr,setLoading) {
-    const ingredientsString = ingredientsArr.join(", ")
+    const ingredientsString = ingredientsArr.map(elem => elem[0]).join(", ")
     try {
         setLoading(true)
         const response = await hf.chatCompletion({

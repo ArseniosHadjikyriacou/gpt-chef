@@ -23,7 +23,7 @@ header > img {
 }
 
 header > h1 {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 main {
@@ -34,7 +34,8 @@ main {
   display: flex;
   justify-content: center;
   gap: 12px;
-  height: 38px;
+  height: 50px;
+  margin-bottom: 30px;
 }
 
 .add-ingredient-form > input {
@@ -45,6 +46,8 @@ main {
   flex-grow: 1;
   min-width: 150px;
   max-width: 400px;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .add-ingredient-form > button {
@@ -53,8 +56,8 @@ main {
   border: none;
   background-color: #141413;
   color: #FAFAF8;
-  width: 150px;
-  font-size: 0.875rem;
+  width: 210px;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -68,8 +71,71 @@ ul.ingredients-list {
 }
 
 ul.ingredients-list > li {
-  color: #475467;
-  line-height: 28px;
+  color: #585a5c;
+  line-height: 35px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.ingredient-container {
+  display: flex;
+  align-items: center;
+}
+
+.ingredient-container > span {
+  width: 250px;
+}
+
+.ingredient-container > input {
+  color: white;
+  background-color: #aaabae;
+  width: 250px;
+  font-size: 1.3rem;
+}
+
+.change-button-container {
+  width: 70px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.change-button {
+  color: #FAFAF8;
+  border: none;
+  height: 22px;
+  border-radius: 11px;
+  background-color: #141413;
+  font-size: 1rem;
+  font-weight: 500;
+  transition-duration: 0.15s;
+}
+
+.change-button:hover {
+  background-color: #2bd265;
+}
+
+.change-button:active {
+  background-color: #21a550;
+}
+
+.delete-button {
+  color: white;
+  border: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 11px;
+  background-color: #8f939b;
+  font-size: 1rem;
+  font-weight: 500;
+  transition-duration: 0.15s;
+}
+
+.delete-button:hover {
+  background-color: #D17557;
+}
+
+.delete-button:active {
+  background-color: #b66449;
 }
 
 .get-recipe-container {
